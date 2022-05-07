@@ -913,17 +913,6 @@ class ClientThread(threading.Thread):
 					msg=''
 					break
 					
-			#if self.loginDone==True and self.firsthand==1:
-			#	if self.desk.getGameStatus()==False:
-			#		self.loginDone=False
-			#		print('startGame at Client Thread')
-			#		self.desk.startGame()
-					
-#currentPlayer 誰控，換ROUND 時要換對。檢查無走步要做對
-			#if msg=='bye':
-			#  break
-			#print ("from client", msg)
-			#self.csocket.send(bytes(msg,'UTF-8'))
 		self.csocket.close()
 		print ("Client at ", clientAddress , " disconnected...")
 		if self.firsthand==1:
